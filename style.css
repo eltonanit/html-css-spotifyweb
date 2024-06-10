@@ -1,0 +1,66 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------                -----FIXED SECTION */
+
+.top-section {
+    height:calc( 100vh - 100px );
+    background-color: red;
+    display: flex;
+}
+.bottom-section {
+    height: 100px;
+    background-color: blue;
+}
+.sidebar {
+    width: 75px;
+    background-color: black;
+}
+.main-content {
+    width: calc( 100vw - 75px );
+    background-color: lightcoral;
+}
+/* ----------------                  ---- LAYOUT  */
+
+header {
+    position: fixed;
+    height: 75px;
+    top: 0;
+     
+    background-color: blueviolet;
+    width:calc( 100vw - 75px );
+    text-align: center;
+    z-index: 1;
+}
+
+/* --------------                   ------ COLORS   */
+
+
+/* -------------                   ------- UTIELITIES   */
+/* --------------                     ------ SPACE   */
+/* --------------               ------ MEDIA SCREEN   */
+
+@media screen and (min-width: 786px) {
+    .sidebar {
+        width: 250px;
+    }
+    .main-content {
+    width: calc(100vw - 250px );
+    }
+
+    header {
+        left: 250px;
+        width: calc(100vw - 75px);;
+    }
+
+}
+
+/* --------------------   */
+/* --------------------   */
+/* --------------------   */
+/* --------------------   */
+/* --------------------   */
+/* --------------------   */
