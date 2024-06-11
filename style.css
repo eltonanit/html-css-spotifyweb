@@ -17,11 +17,14 @@
 }
 .sidebar {
     width: 75px;
-    background-color: black;
+    background-color: rgb(4, 4, 4);
 }
 .main-content {
     width: calc( 100vw - 75px );
+    height: calc(100vh - 75px);
     background-color: rgb(29, 228, 29);
+    
+    
 }
 /* ----------------                  ---- LAYOUT  */
 
@@ -35,11 +38,86 @@ header {
     text-align: center;
     z-index: 1;
 }
+.main-content {
+    width: calc(100vw - 75px);
+    
+    overflow: scroll;
+    background-color: rgb(29, 228, 29);
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
 
-/* --------------                   ------ COLORS   */
+
+}
+/* ----------------                  ---- SPACES  */
+
+.m-top {
+    margin-top: 90px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+.m-20 {
+    margin: 20px;
+}
+
+/* ----------------                  ---- COLONNE  */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+     
+}
+.col-100 {
+
+    width: 100%;
+
+    height: 50px;
+    background-color: rgb(156, 69, 69);
+    padding: 0 10px;
+}
+.col-16 {
+
+    width: 100%;   
+    height: 50px;
+    background-color: red;
+}
+
+
+.categorie-list {
+    display: flex;
+   
+    flex-wrap: wrap;
+ justify-content: center;
+    
+}
+.categorie-list li {
+    padding:5px 12px;
+    list-style-type: none;
+    text-align: center
+   
+}
+/* -------------------                 -P R O V E ----------------    */
+.logo {
+    position:  ;
+    margin: 15px ;
+ }
+
+.logo img {
+  
+}
+ 
 
 
 /* -------------                   ------- UTIELITIES   */
+
+
+/* -------------                   ------- COLORS   */
+
+.text-white{
+    color: white;
+}
 /* --------------                     ------ SPACE   */
 
 /* --------------------  ----------------------------  PLAYBAR  */
@@ -83,54 +161,70 @@ header {
     border: 1px solid black;
 }
 
-.bottom-list{
-    list-style-type: none;
+.buttons-list {
+    list-style-type : none ;
     display: flex;
     justify-content: center;
 }
 
-.bottom-list li {
+.buttons-list li {
     margin: 10px;}
 
-/* --------------------   */
 
-/* --------------               ------ MEDIA SCREEN   */
 
-@media screen and (min-width: 425px) {
+/* --------------   DA 0 a 425 A             ------ MEDIA SCREEN   */
+
+ @media (min-width: 0px) and (max-width: 425px){
     .sidebar {
-        width: 200px;
-    }
-    .main-content {
-    width: calc(100vw - 200px );
+        width: 75px;
+        background-color: rgb(248, 216, 8);
     }
 
-    header {
-        left: 200px;
-        width: calc(100vw - 75px);
+    .col-16{width: 37%;}
+
+    .main-content {
+    width: calc(100vw - 75px );
     }
+
+ 
     .left-col, .right-col {
         width: 15%;
     }
         .center-col {
             width: 70%;
+    }
+ 
+}
+
+/* --------------   DA 600  A 1200          ------ MEDIA SCREEN   */
+
+ 
+ @media (min-width: 426px) and (max-width: 600px) {
+    .sidebar {
+        width: 150px;
+        background-color: rgb(13, 193, 238);
+    }
+           
+    
+        
+        .main-content {
+            min-width: calc(100vw - 150px);
         }
 
 }
 
-/* ----------------                               ---- PROVE ------------MEDIA QUERY    */
+/* --------------   DA 600 A 1200            ------ MEDIA SCREEN   */
 
-/*----------------------------------------------- MISURA Tablets [601px -> 1200px]*/
-@media only screen and (max-width: 1200px) {
-    
-}
-/*----------------------------------------------- MISURA BIG Big smartphones [426px -> 600px]*/
-@media only screen and (max-width: 600px) {
-    
-}
-    /*------------------------------------------ MISURA SMALL Small smartphones [325px -> 425px]*/
-@media only screen and (max-width: 425px) {
 
-}
-/* --------------------   */
-/* --------------------   */
-/* --------------------   */
+ @media (min-width: 600px) and (max-width: 1700px) {
+     .sidebar {
+         width: 200px;
+         background-color: rgb(93, 61, 209);
+     }
+
+            
+            }
+
+
+ 
+ 
