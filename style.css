@@ -13,7 +13,7 @@
 }
 .bottom-section {
     height: 100px;
-    background-color: blue;
+    background-color: yellow;
 }
 .sidebar {
     width: 75px;
@@ -21,7 +21,7 @@
 }
 .main-content {
     width: calc( 100vw - 75px );
-    background-color: lightcoral;
+    background-color: rgb(29, 228, 29);
 }
 /* ----------------                  ---- LAYOUT  */
 
@@ -41,26 +41,96 @@ header {
 
 /* -------------                   ------- UTIELITIES   */
 /* --------------                     ------ SPACE   */
+
+/* --------------------  ----------------------------  PLAYBAR  */
+.bottom-section{
+    display: flex;
+}
+
+.left-col,
+.right-col {
+    width: 200px;
+    height: 100%;
+    background-color: orangered;
+    border: 1px solid black;
+}
+
+.center-col {
+    width:calc( 100% - 400px);
+    height: 100%;
+    background-color: salmon;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.playbar-controls {
+    display: flex;
+    width: 100%;
+}
+.playbar-controls .current,
+.playbar-controls .end  {
+    width: 10%;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.playbar-controls .playbar {
+    width: 80% ;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+.bottom-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-list li {
+    margin: 10px;}
+
+/* --------------------   */
+
 /* --------------               ------ MEDIA SCREEN   */
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 425px) {
     .sidebar {
-        width: 250px;
+        width: 200px;
     }
     .main-content {
-    width: calc(100vw - 250px );
+    width: calc(100vw - 200px );
     }
 
     header {
-        left: 250px;
-        width: calc(100vw - 75px);;
+        left: 200px;
+        width: calc(100vw - 75px);
     }
+    .left-col, .right-col {
+        width: 15%;
+    }
+        .center-col {
+            width: 70%;
+        }
 
 }
 
-/* --------------------   */
-/* --------------------   */
-/* --------------------   */
+/* ----------------                               ---- PROVE ------------MEDIA QUERY    */
+
+/*----------------------------------------------- MISURA Tablets [601px -> 1200px]*/
+@media only screen and (max-width: 1200px) {
+    
+}
+/*----------------------------------------------- MISURA BIG Big smartphones [426px -> 600px]*/
+@media only screen and (max-width: 600px) {
+    
+}
+    /*------------------------------------------ MISURA SMALL Small smartphones [325px -> 425px]*/
+@media only screen and (max-width: 425px) {
+
+}
 /* --------------------   */
 /* --------------------   */
 /* --------------------   */
