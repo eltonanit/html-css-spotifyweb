@@ -8,50 +8,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
 
     <title>Spotify Web</title>
 </head>
 
-<body>
+<body class="roboto-regular roboto-medium roboto-bold">
     <!-- -----------                      ------MACRO STUTTURA -->
     <div class="top-section">
-        <div class="sidebar text-white">
-            <!--                logo media query -->
-            <div class="logo">
-                <img src="./img/logo.svg" alt="">
+        <div class="sidebar text-grey">
+            <div class="top-sidbar m-left-5 ">
+                <!--                logo media query -->
+                <div class="nav-logo">
+                    <img src="./img/logo.svg" alt="">
+                </div>
+                <!-- -----------                      -----          - SIDEBAR  -->
+                <div class="nav-menu">
+                    <ul class="nav-menu-list">
+                        <li class="text-white"><i class="fa-solid fa-house"></i>Home</li>
+                        <li><i class="fa-solid fa-magnifying-glass"></i>Cerca</li>
+                        <li><i class="fa-solid fa-book"></i>La tua libreria</li>
+                    </ul>
+
+                </div>
+
+                <!-- -----------                      ----- PLAYLIST  -->
+
+                <div class="nav-playlist m-left-5 ">
+                    <h3 class="text-white">PLAYLIST</h3>
+                
+                    <a href=""><i class="fa-solid fa-square-plus"></i></a><span>Crea Playlist</span>
+                    <ul class="playlist-list">
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                    </ul>
+                </div>
+
+                <!-- -----------                      ----- SIDEBAR BOTTOM  -->
             </div>
-            <!-- -----------                      -----          - SIDEBAR  -->
-            <div class="menu-sidebar">
-                <ul class="menu-sidebar-list">
-                    <li><i></i>Home</li>
-                    <li><i></i>Cerca</li>
-                    <li><i></i>La tua libreria</li>
-                </ul>
-
-            </div>
-
-            <!-- -----------                      ----- PLAYLIST  -->
-
-            <div class="playlist">
-                PLAYLIST
-                <ul class="playlist-list">
-                    <li><i></i>Crea Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                </ul>
-            </div>
-
-            <!-- -----------                      ----- SIDEBAR BOTTOM  -->
-            <div class="sidebar-bottom">
-                <ul>
-                    <li>Installa app </li>
+            <div class="sidebar-bottom m-left-5 ">
+                <ul class="playlist-list m-top">
+                    <li><i class="fa-regular fa-circle-down"></i>Installa app </li>
                     <hr>
-                    <li>John Doe </li>
+                    <li><i class="fa-solid fa-circle-user"></i>John Doe </li>
                 </ul>
 
             </div>
@@ -60,12 +68,17 @@
 
         <!-- -----------                      ----- MAIN CONTEMT  -->
         <div class="main-content ">
+                    <!-- -----------                      ----- HEADER  -->
             <header>
-                <div class="upgrade"></div>
+                <div class="upgrade">
+
+                    <button>EFFETTUA UPGRADE</button>
+
+                </div>
             </header>
 
 
-            <div class="categorie m-top ">
+            <div class="categorie m-top text-grey">
                 <ul class="categorie-list">
                     <li>IN EVIDENZA</li>
                     <li>PODCAST</li>
@@ -76,34 +89,46 @@
                 </ul>
             </div>
 
-            <div class="container">
+            <div class="container text-white">
 
                 <h3 class="m-20">Recently Added</h3>
                 <div class=" row ">
 
-                    <div class="col-16 m-20">Ciao r</div>
-                    <div class="col-16 m-20">Ciao r</div>
-                    <div class="col-16 m-20">Ciao r</div>
-                    <div class="col-16 m-20">Ciao r</div>
-                    <div class="col-16 m-20">Ciao r</div>
-                    <div class="col-16 m-20">Ciao r</div>
-                    <div class="col-16 m-20">Ciao r</div>
+                    <div class="col-16 m-20">
+                        <img src="./img/metal_lifting.jpg" alt="">
+                        </div>
+                    <div class="col-16 m-20"> 
+                        <img src="./img/stranger.jpeg" alt="">
+                    </div>
+                    <div class="col-16 m-20"> 
+                        <img src="./img/aquietplace.jpeg" alt="">
+                    </div>
+                    <div class="col-16 m-20"> 
+                        <img src="./img/split.jpeg" alt="">
+                    </div>
+                    <div class="col-16 m-20"> 
+                        <img src="./img/cure.jpeg" alt="">
+                    </div>
+                    <div class="col-16 m-20"> 
+                        <img src="./img/sinister.jpeg" alt="">
+                    </div>
                 </div>
                 <!-- 1 -->
-                <h3 class="m-20">ARTISTI </h3>
+                <h3 class="m-20">Creato per John Doe </h3>
                 <div class=" row ">
 
-                    <div class="col-16 m-20">Ciao r</div>
-                    <div class="col-16 m-20">Ciao r</div>
-                 
+                    <div class="col-16 m-20"> 
+                        <img src="./img/radar.jpeg" alt=""></div>
+                    <div class="col-16 m-20"><img src="./img/mixdaily.jpeg" alt=""></div>
+
                 </div>
                 <!-- 2 -->
-                <h3 class="m-20">SUGGERIMENTI Added</h3>
+                <h3 class="m-20"> Artisti più popolari</h3>
                 <div class=" row ">
 
-                    <div class="col-16 m-20">Ciao r</div>
-                    <div class="col-16 m-20">Ciao r</div>
-                    
+                    <div class="col-16 m-20"><img src="./img/metal_lifting.jpg" alt=""></div>
+                    <div class="col-16 m-20"><img src="img/einaudi.jpeg" alt=""></div>
+
                 </div>
 
             </div>
@@ -113,24 +138,46 @@
     </div>
 
 
-    
-    <div class="bottom-section">
-        <!-- ------------------------------ COLONNA RIGH MEDIA QUERY -->
-        <div class="left-col">
-            <div class="brano">
-                <img src="./img/sini ster.jpeg" alt="">
-                <span> S</span>
+
+    <div class="bottom-section ">
+        <!-- ------------------------------ COLONNA LEFT - BOTTOM -->
+        <div class="left-col d-flex">
+            <div class="brano d-flex">
+                <img src="./img/sinister.jpeg" alt="">
+                <div class="titolo-brano">
+                    <span> Sinister <br> </span>
+                    <span> Brano nome</span>
+
+                </div>
+
+            </div>
+            <div class="brano-pulsanti d-flex f-row">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-folder"></i>
+
+
+
             </div>
 
 
         </div>
+
+        <!-- ------------------------------ COLONNA CENTRALE - BOTTOM -->
         <div class="center-col">
             <div class="buttons">
 
                 <ul class="buttons-list">
                     <li><i class="fa fa-random"></i></li>
-                    <li><i class="fa fa-random"></i></li>
-                    <li><i class="fa fa-random"></i></li>
+                    <li> <i class="fa-solid fa-backward-step"></i></li>
+                    <li>
+                        <i class="fa-regular fa-circle-play"></i>
+                    </li>
+                    <li> <i class="fa-solid fa-forward-step"></i></li>
+                    <li> <i class="fa-solid fa-rotate-right"></i></li>
+
+
+
+
                 </ul>
 
 
@@ -142,7 +189,17 @@
                 <div class="end">4:31</div>
             </div>
         </div>
-        <div class="right-col">Right</div>
+
+        <!-- ------------------------------ COLONNA RIGHT - BOTTOM -->
+        <div class="right-col d-flex">
+
+            <i class="fa-solid fa-list-ul"></i>
+            <i class="fa-solid fa-display"></i>
+            <i class="fa-solid fa-volume-high"></i>
+            <div class="playbar"></div>
+
+        </div>
+
 
     </div>
     <main>

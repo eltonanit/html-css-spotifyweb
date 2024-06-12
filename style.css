@@ -1,54 +1,113 @@
-*{ 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+ 
+ 
 
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 /* ---------------                -----FIXED SECTION */
 
 .top-section {
-    height:calc( 100vh - 100px );
+    height: calc(100vh - 100px);
     background-color: red;
     display: flex;
 }
+
 .bottom-section {
     height: 100px;
     background-color: yellow;
 }
-.sidebar {
-    width: 75px;
-    background-color: rgb(4, 4, 4);
-}
+
+
 .main-content {
-    width: calc( 100vw - 75px );
+    width: calc(100vw - 75px);
     height: calc(100vh - 75px);
-    background-color: rgb(29, 228, 29);
-    
-    
+    background-color: #141922;
+
+
 }
+
+
+
 /* ----------------                  ---- LAYOUT  */
 
 header {
     position: fixed;
     height: 75px;
     top: 0;
-     
-    background-color: blueviolet;
-    width:calc( 100vw - 75px );
+    background-color: #080b12;
+    width: calc(100vw - 75px);
     text-align: center;
     z-index: 1;
 }
+/* --------------------  ----------------------------  HEADER BUTTON  */
+
+button{
+    height: 40px;
+    width: auto;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: #080b12;
+    border: 2px solid  white;
+
+     
+      position: absolute;
+      right: 150px;
+      top: 15px;
+}
+
 .main-content {
     width: calc(100vw - 75px);
-    
     overflow: scroll;
-    background-color: rgb(29, 228, 29);
+   
+    position: relative;
 }
-.container{
+
+.container {
     width: 100%;
     margin: 0 auto;
+}
 
+.bottom-section {
+    display: flex;
+}
 
+.left-col,
+.right-col {
+   
+    height: 100%;
+    background-color: orangered;
+    border: 1px solid black;
+}
+
+.center-col {
+    width: calc(100vw - 213px);
+    height: 100%;
+    background-color: salmon;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /* ----------------                  ---- SPACES  */
 
@@ -59,16 +118,25 @@ header {
 .p-20 {
     padding: 20px;
 }
+
 .m-20 {
-    margin: 20px;
+    margin: 10px;
 }
+.m-left-5 {
+    margin-left: 5px; 
+}
+.m-top-10 {
+    margin-top: 10px;
+}
+
 
 /* ----------------                  ---- COLONNE  */
 .row {
     display: flex;
     flex-wrap: wrap;
-     
+
 }
+
 .col-100 {
 
     width: 100%;
@@ -77,154 +145,262 @@ header {
     background-color: rgb(156, 69, 69);
     padding: 0 10px;
 }
+
 .col-16 {
 
-    width: 100%;   
-    height: 50px;
-    background-color: red;
+    width: 100%;
+    
+    
 }
-
+.col-16 img{
+    width: 100%;
+    height: auto;
+}
 
 .categorie-list {
     display: flex;
-   
+
     flex-wrap: wrap;
- justify-content: center;
-    
+    justify-content: center;
+
 }
+
 .categorie-list li {
-    padding:5px 12px;
+    padding: 5px 12px;
     list-style-type: none;
     text-align: center
-   
 }
-/* -------------------                 -P R O V E ----------------    */
-.logo {
-    position:  ;
-    margin: 15px ;
- }
 
-.logo img {
-  
-}
- 
 
 
 /* -------------                   ------- UTIELITIES   */
-
+.d-flex{
+    display: flex;
+}
+.f-row{
+    flex-direction: column;
+}
 
 /* -------------                   ------- COLORS   */
 
-.text-white{
+.text-white {
     color: white;
 }
-/* --------------                     ------ SPACE   */
-
-/* --------------------  ----------------------------  PLAYBAR  */
-.bottom-section{
-    display: flex;
+.text-grey {
+    color:#797a7f;
 }
 
-.left-col,
-.right-col {
-    width: 200px;
-    height: 100%;
-    background-color: orangered;
-    border: 1px solid black;
+ 
+/* --------------------  -----------------  BOTTOM COLONNA RIGHT  */
+
+.brano img {
+    width: 35%;
+    height: 35%;
+
 }
 
-.center-col {
-    width:calc( 100% - 400px);
-    height: 100%;
-    background-color: salmon;
-    border: 1px solid black;
+
+
+
+/* --------------------  ----------------------------  SIDEBAR  */
+.sidebar {
+    width: 150px;
+    background-color: rgb(4, 4, 4);
+    background-color:#000000 ;
+}
+.top-sidebar {
+    overflow-y: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
+.nav-logo {/* -------  media query ?  */
+
+    margin: 5px;
+    height: 80px;
+   
+    border: 1px solid black;
+}
+.nav-menu { /* -------  media query ?  */
+    height: 100px;
+    margin: 5px;
+    font-size: 16px;        
+    
+}
+.nav-menu-list i { /* -------  media query ?  */
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.nav-playlist   {      
+    overflow-y: hidden;
+}
+.nav-playlist i {
+ font-size: 30px;
+ color: #797a7f;
+ padding: 0px 5px;
+ margin-top: 5px;
+
+}
+ 
+.playlist-list   {
+    margin-left: 5px;
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 3px;  
+    height: 35vh; 
+    
+
+}
+.playlist-list li{
+margin: 10px 0px;
+}
+
+.sidebar-bottom {
+    height: 80px;
+    
+
+}
+
+ 
+
+/* --------------------  ----------------------------  PLAYBAR  */
 
 .playbar-controls {
     display: flex;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
+
 .playbar-controls .current,
-.playbar-controls .end  {
-    width: 10%;
+.playbar-controls .end {
+    width: 5%;
     background-color: white;
     border: 1px solid black;
+    font-size: 10px;
+    padding-bottom: 10px; 
 }
 
-.playbar-controls .playbar {
-    width: 80% ;
+.playbar-controls .playbar,
+.right-col .playbar {
+    width: 60%;
+    height: 7px;
+    margin: 0 5px;;
     background-color: aqua;
+    border-radius: 25%;
     border: 1px solid black;
 }
 
+
 .buttons-list {
-    list-style-type : none ;
+    list-style-type: none;
     display: flex;
     justify-content: center;
 }
 
 .buttons-list li {
-    margin: 10px;}
+    margin: 10px;
+}
 
 
 
-/* --------------   DA 0 a 425 A             ------ MEDIA SCREEN   */
+/* --------------   DA 0 a 425 A       SMALL      ------ MEDIA SCREEN   */
 
- @media (min-width: 0px) and (max-width: 425px){
+@media (min-width: 0px) and (max-width: 425px) {
     .sidebar {
         width: 75px;
-        background-color: rgb(248, 216, 8);
+        background-color: rgb(0, 0, 0);
     }
 
-    .col-16{width: 37%;}
+    .col-16 {
+        width: 37%;
+    }
 
     .main-content {
-    width: calc(100vw - 75px );
+        width: calc(100vw - 75px);
     }
 
- 
-    .left-col, .right-col {
-        width: 15%;
-    }
-        .center-col {
-            width: 70%;
-    }
- 
-}
 
-/* --------------   DA 600  A 1200          ------ MEDIA SCREEN   */
-
- 
- @media (min-width: 426px) and (max-width: 600px) {
-    .sidebar {
+    .left-col,
+    .right-col {
         width: 150px;
-        background-color: rgb(13, 193, 238);
     }
-           
+    .center-col{
+    width: calc(100vw - 195px);
+    }
+
+    .nav-menu-list li{
+        display: none;
+    }
+
     
-        
-        .main-content {
-            min-width: calc(100vw - 150px);
-        }
 
 }
 
-/* --------------   DA 600 A 1200            ------ MEDIA SCREEN   */
+/* --------------   DA 426  A 600       BIG PHONE ------ MEDIA SCREEN   */
 
 
- @media (min-width: 600px) and (max-width: 1700px) {
-     .sidebar {
-         width: 200px;
-         background-color: rgb(93, 61, 209);
-     }
+@media (min-width: 426px) and (max-width: 600px) {
+    .sidebar {
+        width: 200px;
+         
+    }
 
-            
-            }
+    .main-content {
+        min-width: calc(100vw - 200px);
+    }
+
+    .col-16 {
+        width: 37%;
+    }
+
+          .left-col,
+          .right-col {
+              width: 200px;
+          }
+    
+          
+
+}
+
+/* --------------   DA 600 A 1200          TABLETS------ MEDIA SCREEN   */
 
 
- 
- 
+@media (min-width: 600px) and (max-width: 1199px) {
+    .sidebar {
+        width: 200px;
+       
+    }
+
+         .col-16 {
+             width: calc(100% / 5);
+         }
+
+                   .left-col,
+                   .right-col {
+                       width: 200px;
+                   }
+        
+                  
+
+}
+/* --------------   DA 1200 a 1700           PC ------ MEDIA SCREEN   */
+
+@media (min-width: 1200px) and (max-width: 1700px) {
+    .sidebar {
+        width: 200px;
+        
+    }
+
+    .col-16 {
+        width:calc(100% / 8 );
+    }
+          .left-col,
+          .right-col {
+              width: 200px;
+          }
+    
+      
+}
+
+
+/* -------------------                 -P R O V E ----------------    */
